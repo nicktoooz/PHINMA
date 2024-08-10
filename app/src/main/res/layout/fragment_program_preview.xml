@@ -37,16 +37,19 @@
                 android:layout_height="wrap_content"
                 android:text="FLEX"
                 android:textColor="@color/white"
+                android:fontFamily="@font/optima_medium"
                 android:textStyle="bold"
+                android:letterSpacing="0.05"
                 android:textSize="30sp"/>
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="11sp"
+                android:textSize="13sp"
                 android:textColor="@color/white"
+                android:fontFamily="@font/myriad_pro"
                 android:text="Mauris accumsan mollis nibh in dictum. Morbi orci tortor, tempus at elementum at, pharetra quis nunc. Maecenas risus justo, feugiat in enim a, dignissim dictum ligula" />
-
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+
 </LinearLayout>

@@ -3,58 +3,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/background"
     android:gravity="center"
     tools:context=".Home">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
-            android:padding="20dp">
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="60dp"
-                android:src="@drawable/phinma_logo"
-                android:contentDescription="Logo"/>
-        <TextView
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choose a School"
-            android:fontFamily="@font/optima_medium"
-            android:letterSpacing="-0.05"
-            android:layout_margin="20dp"
-            android:textSize="20sp"/>
-
-            <GridLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:columnCount="3"
-                android:rowCount="3"
-                >
-                <ImageView
-                    android:layout_margin="10dp"
-                    android:src="@mipmap/ic_launcher"/>
-                <ImageView
-                    android:layout_margin="10dp"
-                    android:src="@mipmap/ic_launcher"/>
-                <ImageView
-                    android:layout_margin="10dp"
-                    android:src="@mipmap/ic_launcher"/>
-                <ImageView
-                    android:layout_margin="10dp"
-                    android:src="@mipmap/ic_launcher"/>
-                <ImageView
-                    android:layout_margin="10dp"
-                    android:src="@mipmap/ic_launcher"/>
-                <ImageView
-                    android:layout_margin="10dp"
-                    android:src="@mipmap/ic_launcher"/>
-            </GridLayout>
-        </LinearLayout>
-
-
+           />
+        <Button
+            android:id="@+id/btn_programs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Programs"/>
+        <Button
+            android:id="@+id/btn_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profile"/>
+        <Button
+            android:id="@+id/btn_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Map"/>
+        <Button
+            android:id="@+id/btn_change_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change User"/>
+    </LinearLayout>
 
 </LinearLayout>
