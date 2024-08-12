@@ -37,7 +37,10 @@ class Home : Fragment() {
             findNavController().navigate(R.id.action_home2_to_profile)
         }
         binding.btnMap.setOnClickListener { findNavController().navigate(R.id.action_home2_to_schoolMap) }
-        binding.btnChangeUser.setOnClickListener { findNavController().popBackStack(R.id.chooseSchool, false)}
+        binding.btnChangeUser.setOnClickListener {
+            viewModel.clear()
+            findNavController().popBackStack(R.id.chooseSchool, false)
+        }
 
         return binding.root
     }

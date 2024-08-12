@@ -34,6 +34,20 @@ class Profile : Fragment() {
 
 
 
+        binding.mobileNumber.addTextChangedListener(object: TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                TODO("Not yet implemented")
+            }
+
+        })
+
 
         binding.fullName.setText(viewModel.fullName)
         binding.address.setText(viewModel.address)
