@@ -125,6 +125,65 @@
                         android:layout_height="match_parent"
                         android:src="@drawable/emblem_araullo"/>
                 </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cdo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:padding="5dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/emblem_cdo"/>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/southwestern"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:padding="5dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/emblem_southwestern"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/union"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:padding="5dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/emblem_laguna"/>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/republican"
+                    android:layout_width="100dp"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:padding="5dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/emblem_republican"/>
+                </androidx.cardview.widget.CardView>
 
             </GridLayout>
 

@@ -30,6 +30,10 @@ class ChooseSchool : Fragment() {
         setNavigation(binding.rizal, R.id.action_chooseSchool_to_profile, School.RIZAL)
         setNavigation(binding.iloilo, R.id.action_chooseSchool_to_profile, School.ILOILO)
         setNavigation(binding.araullo, R.id.action_chooseSchool_to_profile, School.ARAULLO)
+        setNavigation(binding.cdo, R.id.action_chooseSchool_to_profile, School.CDO)
+        setNavigation(binding.southwestern, R.id.action_chooseSchool_to_profile, School.SOUTHWESTERN)
+        setNavigation(binding.union, R.id.action_chooseSchool_to_profile, School.UNION)
+        setNavigation(binding.republican, R.id.action_chooseSchool_to_profile, School.REPUBLICAN)
 
         return binding.root
     }
@@ -50,5 +54,9 @@ enum class School(val value: String, val emblem: Int) {
     JUDE("PHINMA Saint Jude College", R.drawable.emblem_jude),
     RIZAL("PHINMA Rizal College of Laguna", R.drawable.emblem_rizal),
     ILOILO("PHINMA University of Iloilo", R.drawable.emblem_iloilo),
-    ARAULLO("PHINMA Araullo University", R.drawable.emblem_araullo)
+    ARAULLO("PHINMA Araullo University", R.drawable.emblem_araullo),
+    CDO("PHINMA Cagayan De Oro College", R.drawable.emblem_cdo),
+    SOUTHWESTERN("SOUTHWESTERN UNIVERSITY", R.drawable.emblem_southwestern),
+    UNION("PHINMA Union College of Laguna",R.drawable.emblem_laguna),
+    REPUBLICAN("PHINMA Republican College", R.drawable.emblem_republican)
 }
