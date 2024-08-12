@@ -8,7 +8,8 @@
     android:orientation="vertical"
     tools:context=".Profile">
 
-    <include layout="@layout/frag_header"/>
+    <include
+        layout="@layout/frag_header"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,6 +25,7 @@
             android:fontFamily="@font/optima_medium"
             android:letterSpacing="-0.01"/>
         <ImageView
+            android:id="@+id/btn_edit"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:src="@drawable/icon_edit"/>

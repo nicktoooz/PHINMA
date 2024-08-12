@@ -33,6 +33,7 @@ class ChooseSchool : Fragment() {
     private fun setNavigation(button: ImageView, destination: Int, school: String){
         button.setOnClickListener {
             viewModel.school = school
+            viewModel.initiator = "Init"
             findNavController().navigate(destination)
         }
     }

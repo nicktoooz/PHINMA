@@ -30,7 +30,10 @@ class Home : Fragment() {
         }
 
         binding.btnPrograms.setOnClickListener { findNavController().navigate(R.id.action_home2_to_help) }
-        binding.btnProfile.setOnClickListener { findNavController().navigate(R.id.action_home2_to_profile) }
+        binding.btnProfile.setOnClickListener {
+            viewModel.initiator = "Home"
+            findNavController().navigate(R.id.action_home2_to_profile)
+        }
         binding.btnMap.setOnClickListener { findNavController().navigate(R.id.action_home2_to_schoolMap) }
         binding.btnChangeUser.setOnClickListener { findNavController().navigate(R.id.action_home2_to_chooseSchool) }
 

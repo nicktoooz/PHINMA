@@ -33,7 +33,11 @@
         android:id="@+id/help"
         android:name="io.nyxbit.phinma.Help"
         android:label="fragment_help"
-        tools:layout="@layout/fragment_help" />
+        tools:layout="@layout/fragment_help" >
+        <action
+            android:id="@+id/action_help_to_programPreview"
+            app:destination="@id/programPreview" />
+    </fragment>
     <fragment
         android:id="@+id/programPreview"
         android:name="io.nyxbit.phinma.ProgramPreview"

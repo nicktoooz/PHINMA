@@ -26,6 +26,11 @@ class Profile : Fragment() {
         val courseList = listOf("Course 1", "Course 2", "Course 3", "Course 4", "Course 5")
         val yearList = listOf("Year 1", "Year 2", "Year 3", "Year 4", "Year 5")
 
+        binding.btnEdit.visibility = when(viewModel.initiator){
+            "Home"-> View.VISIBLE
+            "Init"-> View.GONE
+            else -> View.GONE
+        }
 
         binding.fullName.setText(viewModel.fullName)
         binding.address.setText(viewModel.address)

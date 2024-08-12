@@ -3,37 +3,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".Home">
 
-    <LinearLayout
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+         android:layout_height="200dp"
+        android:orientation="vertical"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="0dp"
+        android:layout_width="match_parent">
+
         <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo_upang"
+            android:scaleType="fitEnd"
+            android:foreground="@drawable/card_gradient"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:padding="20dp"
+            >
+            <TextView
+                android:textColor="@color/white"
+                android:textSize="40dp"
+                android:letterSpacing="-0.05"
+                android:fontFamily="@font/optima_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hi Nick!"/>
+            <TextView
+                android:textColor="@color/white"
+                android:fontFamily="@font/myriad_pro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PHINMA University of Pangasinan"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:background="@drawable/card_gradient_invert">
+
+        <GridLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-           />
-        <Button
-            android:id="@+id/btn_programs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Programs"/>
-        <Button
-            android:id="@+id/btn_profile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Profile"/>
-        <Button
-            android:id="@+id/btn_map"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Map"/>
-        <Button
-            android:id="@+id/btn_change_user"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Change User"/>
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_programs"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:text="Programs"/>
+            <Button
+                android:id="@+id/btn_profile"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:text="Profile"/>
+            <Button
+                android:id="@+id/btn_map"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Map"/>
+            <Button
+                android:id="@+id/btn_change_user"
+                android:layout_width="150dp"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:layout_height="wrap_content"
+                android:text="Change User"/>
+        </GridLayout>
+
     </LinearLayout>
+
 
 </LinearLayout>

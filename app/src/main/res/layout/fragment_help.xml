@@ -23,6 +23,7 @@
         android:letterSpacing="-0.03"/>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/flex"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         app:cardCornerRadius="10dp"
@@ -62,11 +63,12 @@
                 android:textSize="13sp"
                 android:fontFamily="@font/myriad_pro"
                 android:textColor="@color/white"
-                android:text="Mauris accumsan mollis nibh in dictum. Morbi orci tortor, tempus at elementum at, pharetra quis nunc. Maecenas risus justo, feugiat in enim a, dignissim dictum ligula" />
+                android:text="Combination of distance learning + face-to-face sessions. A traditional way of 6-8 subjects in 1 semester." />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
+        android:id="@+id/rad"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         app:cardCornerRadius="10dp"
@@ -105,7 +107,7 @@
                 android:textSize="13sp"
                 android:fontFamily="@font/myriad_pro"
                 android:textColor="@color/white"
-                android:text="Mauris accumsan mollis nibh in dictum. Morbi orci tortor, tempus at elementum at, pharetra quis nunc. Maecenas risus justo, feugiat in enim a, dignissim dictum ligula" />
+                android:text="100% home-based learning; suited for working students who need a flexible learning setup, and to students who live far away and have difficulties traveling to come to school." />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
