@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 
 class ViewModel : ViewModel(){
     var initiator : String = ""
-    var school : String = ""
+    var school : School = School.NONE
     var fullName : String = ""
     var course : String = ""
     var year : String = ""
@@ -12,7 +12,7 @@ class ViewModel : ViewModel(){
     var mobileNumber : String = ""
 
     fun clear(){
-        school = ""
+        school = School.NONE
         fullName = ""
         course = ""
         year = ""

@@ -1,6 +1,8 @@
 package io.nyxbit.phinma
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -21,8 +23,6 @@ class Profile : Fragment() {
     ): View {
         binding = FragmentProfileBinding.inflate(inflater, container, false)
         val viewModel = ViewModelProvider(requireActivity())[ViewModel::class.java]
-
-        // Initialize the course and year lists
         val courseList = listOf("Course 1", "Course 2", "Course 3", "Course 4", "Course 5")
         val yearList = listOf("Year 1", "Year 2", "Year 3", "Year 4", "Year 5")
 
@@ -31,6 +31,9 @@ class Profile : Fragment() {
             "Init"-> View.GONE
             else -> View.GONE
         }
+
+
+
 
         binding.fullName.setText(viewModel.fullName)
         binding.address.setText(viewModel.address)
@@ -44,7 +47,6 @@ class Profile : Fragment() {
             viewModel.fullName = binding.fullName.text.toString()
             viewModel.address = binding.address.text.toString()
             viewModel.mobileNumber = binding.mobileNumber.text.toString()
-
             findNavController().navigate(R.id.action_profile_to_home2)
         }
         return binding.root

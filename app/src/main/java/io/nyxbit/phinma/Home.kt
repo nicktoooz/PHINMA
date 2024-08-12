@@ -23,12 +23,14 @@ class Home : Fragment() {
 
         binding.apply{
             val colourScheme = when(viewModel.school) {
-                "UPang Urdaneta" -> Color.RED
+                School.PUCU -> Color.RED
                 else -> Color.BLUE
             }
             btnProfile.setBackgroundColor(colourScheme)
         }
-
+        binding.ivEmblem.setImageResource(viewModel.school.emblem)
+        binding.tvName.text = "Hi ${viewModel.fullName.trim().split(" ").firstOrNull()}!"
+        binding.tvSchool.text = viewModel.school.value
         binding.btnPrograms.setOnClickListener { findNavController().navigate(R.id.action_home2_to_help) }
         binding.btnProfile.setOnClickListener {
             viewModel.initiator = "Home"

@@ -31,33 +31,103 @@
             android:textSize="16sp"/>
 
             <GridLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:columnCount="3"
-                android:rowCount="3"
-                >
-                <ImageView
-                    android:id="@+id/upang_urdaneta"
+                android:rowCount="3">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pucu"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_margin="10dp"
-                    android:src="@mipmap/ic_launcher"/>
-                <ImageView
-                    android:id="@+id/rizal"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:src="@drawable/emblem_pucu"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/upang"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_margin="10dp"
-                    android:src="@mipmap/ic_launcher"/>
-                <ImageView
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:src="@drawable/emblem_upang"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:id="@+id/jude"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_margin="10dp"
-                    android:src="@mipmap/ic_launcher"/>
-                <ImageView
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:padding="5dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/emblem_jude"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/rizal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_margin="10dp"
-                    android:src="@mipmap/ic_launcher"/>
-                <ImageView
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:src="@drawable/emblem_rizal"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/iloilo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_margin="10dp"
-                    android:src="@mipmap/ic_launcher"/>
-                <ImageView
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:padding="5dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/emblem_iloilo"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/araullo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_margin="10dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:padding="5dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/emblem_araullo"/>
+                </androidx.cardview.widget.CardView>
+
             </GridLayout>
+
         </LinearLayout>
 
 
