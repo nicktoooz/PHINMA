@@ -65,6 +65,9 @@
             app:destination="@id/profile" />
         <action
             android:id="@+id/action_home2_to_chooseSchool"
-            app:destination="@id/chooseSchool" />
+            app:destination="@id/chooseSchool"
+            app:popUpTo="@id/chooseSchool"
+            app:popUpToInclusive="false"/>
+
     </fragment>
 </navigation>
