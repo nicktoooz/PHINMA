@@ -19,8 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:foreground="@drawable/card_gradient"
-            android:scaleType="fitEnd"
-            android:src="@drawable/emblem_upang" />
+            android:scaleType="fitEnd" />
 
         <LinearLayout
             android:layout_width="match_parent"
