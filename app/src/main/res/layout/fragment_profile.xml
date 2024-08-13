@@ -44,6 +44,7 @@
            android:layout_height="wrap_content"
            app:boxStrokeWidth="0dp">
            <com.google.android.material.textfield.TextInputEditText
+               android:enabled="false"
                android:id="@+id/full_name"
                android:layout_width="match_parent"
                android:layout_height="match_parent"
@@ -65,14 +66,16 @@
             android:layout_height="wrap_content">
             <Spinner
                 android:id="@+id/spinner_course"
-                android:layout_columnWeight="1"
+                android:enabled="false"
+                android:layout_width="240dp"
                 android:layout_height="50dp"
                 />
 
             <Spinner
                 android:id="@+id/spinner_year"
                 android:layout_height="50dp"
-                android:layout_columnWeight="0.2"
+                android:layout_columnWeight="1"
+                android:enabled="false"
                 />
             <TextView
                 android:visibility="invisible"
@@ -102,6 +105,7 @@
                 android:id="@+id/address"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:enabled="false"
                 android:hint="Address" />
             <TextView
                 android:visibility="invisible"
@@ -120,6 +124,7 @@
                 android:layout_width="match_parent"
                 android:maxLines="1"
                 android:inputType="numberDecimal"
+                android:enabled="false"
                 android:layout_height="match_parent"
                 android:hint="Mobile Number" />
             <TextView
@@ -132,6 +137,9 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
+            android:textColor="@color/white"
+            android:background="@drawable/btn_background"
+            android:paddingHorizontal="80dp"
             android:id="@+id/btn_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -54,7 +54,7 @@ class Profile : Fragment() {
             "Bachelor of Secondary Education Major in Social Studies",
             "Bachelor of Science in Criminology",
             "Bachelor of Science in Architecture",
-            "Bachelor of Science in  Computer Engineering",
+            "Bachelor of Science in Computer Engineering",
             "Bachelor of Science in Civil Engineering",
             "Bachelor of Science in Electrical Engineering",
             "Bachelor of Science in Mechanical Engineering",
@@ -73,57 +73,96 @@ class Profile : Fragment() {
         )
         val yearList = listOf("Year", "Year 1", "Year 2", "Year 3", "Year 4")
 
-
+        // Set visibility and initial state of UI elements
         binding.btnEdit.visibility = when (viewModel.initiator) {
             "Home" -> View.VISIBLE
             "Init" -> View.GONE
             else -> View.GONE
         }
         binding.header.header.setBackgroundColor(Color.parseColor(viewModel.school.primaryColor))
-
+        binding.btnSave.setBackgroundColor(Color.parseColor(viewModel.school.primaryColor))
+        // Initialize textboxes with ViewModel data
         binding.fullName.setText(viewModel.fullName)
         binding.address.setText(viewModel.address)
         binding.mobileNumber.setText(viewModel.mobileNumber)
 
+        // Disable textboxes and spinners initially
+        setTextBoxesEnabled(false)
+        setSpinnersEnabled(false)
+
         setupSpinner(binding.spinnerCourse, courseList)
         setupSpinner(binding.spinnerYear, yearList)
 
-        binding.btnSave.setOnClickListener {
-//            if (binding.fullName.text.toString().isNullOrEmpty()){
-//                binding.nameError.visibility = View.VISIBLE
-//                return@setOnClickListener
-//            }else{
-//                binding.nameError.visibility = View.INVISIBLE
-//            }
-//            if (binding.spinnerCourse.selectedItem == "Course"){
-//                binding.courseError.visibility = View.VISIBLE
-//                return@setOnClickListener
-//            }else{
-//                binding.courseError.visibility = View.INVISIBLE
-//            }
-//            if (binding.spinnerYear.selectedItem == "Year"){
-//                binding.yearError.visibility = View.VISIBLE
-//                return@setOnClickListener
-//            }else{
-//                binding.yearError.visibility = View.INVISIBLE
-//            }
-//            if (binding.address.text.toString().isNullOrEmpty()){
-//                binding.addressError.visibility = View.VISIBLE
-//                return@setOnClickListener
-//            }else{
-//                binding.addressError.visibility = View.INVISIBLE
-//            }
-//            if (binding.mobileNumber.text.toString().isNullOrEmpty()){
-//                binding.numberError.visibility = View.VISIBLE
-//                return@setOnClickListener
-//            }else{
-//                binding.numberError.visibility = View.INVISIBLE
-//            }
-            viewModel.fullName = binding.fullName.text.toString()
-            viewModel.address = binding.address.text.toString()
-            viewModel.mobileNumber = binding.mobileNumber.text.toString()
-            findNavController().navigate(R.id.action_profile_to_home2)
+        // Set onClickListener for btnEdit
+        binding.btnEdit.setOnClickListener {
+            // Enable textboxes and spinners when btnEdit is pressed
+            setTextBoxesEnabled(true)
+            setSpinnersEnabled(true)
+            binding.btnSave.text = "Save Changes"
         }
+
+        // Set onClickListener for btnSave
+        binding.btnSave.setOnClickListener {
+            // Validate inputs and display errors if necessary
+            var isValid = true
+
+            // Validate Full Name
+            if (binding.fullName.text.toString().isEmpty()) {
+                binding.nameError.visibility = View.VISIBLE
+                isValid = false
+            } else {
+                binding.nameError.visibility = View.INVISIBLE
+            }
+
+            // Validate Course Selection
+            if (binding.spinnerCourse.selectedItem == "Course") {
+                binding.courseError.visibility = View.VISIBLE
+                isValid = false
+            } else {
+                binding.courseError.visibility = View.INVISIBLE
+            }
+
+            // Validate Year Selection
+            if (binding.spinnerYear.selectedItem == "Year") {
+                binding.yearError.visibility = View.VISIBLE
+                isValid = false
+            } else {
+                binding.yearError.visibility = View.INVISIBLE
+            }
+
+            // Validate Address
+            if (binding.address.text.toString().isEmpty()) {
+                binding.addressError.visibility = View.VISIBLE
+                isValid = false
+            } else {
+                binding.addressError.visibility = View.INVISIBLE
+            }
+
+            // Validate Mobile Number
+            if (binding.mobileNumber.text.toString().isEmpty()) {
+                binding.numberError.visibility = View.VISIBLE
+                isValid = false
+            } else {
+                binding.numberError.visibility = View.INVISIBLE
+            }
+
+            if (isValid) {
+                // Update ViewModel with the latest data
+                viewModel.fullName = binding.fullName.text.toString()
+                viewModel.address = binding.address.text.toString()
+                viewModel.mobileNumber = binding.mobileNumber.text.toString()
+
+                // Navigate to another fragment
+                findNavController().navigate(R.id.action_profile_to_home2)
+            }
+        }
+
+        // Enable textboxes and spinners if the initiator is "Init"
+        if (viewModel.initiator == "Init") {
+            setTextBoxesEnabled(true)
+            setSpinnersEnabled(true)
+        }
+
         return binding.root
     }
 
@@ -136,5 +175,16 @@ class Profile : Fragment() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         }
         spinner.adapter = adapter
+    }
+
+    private fun setTextBoxesEnabled(enabled: Boolean) {
+        binding.fullName.isEnabled = enabled
+        binding.address.isEnabled = enabled
+        binding.mobileNumber.isEnabled = enabled
+    }
+
+    private fun setSpinnersEnabled(enabled: Boolean) {
+        binding.spinnerCourse.isEnabled = enabled
+        binding.spinnerYear.isEnabled = enabled
     }
 }
