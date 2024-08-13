@@ -17,8 +17,8 @@
         <ImageView
             android:id="@+id/iv_emblem"
             android:layout_width="match_parent"
+            android:foreground="@drawable/bg_gradient"
             android:layout_height="match_parent"
-            android:foreground="@drawable/card_gradient"
             android:scaleType="fitEnd" />
 
         <LinearLayout
@@ -34,15 +34,16 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/optima_medium"
                 android:letterSpacing="-0.05"
-                android:textColor="@color/white"
+                android:textColor="@color/primary"
                 android:textSize="40dp" />
 
             <TextView
                 android:id="@+id/tv_school"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/primary"
                 android:fontFamily="@font/myriad_pro"
-                android:textColor="@color/white" />
+               />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -51,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@drawable/card_gradient_invert"
+        android:background="@color/background"
         android:gravity="center">
 
 
@@ -64,14 +65,25 @@
                 android:id="@+id/btn_programs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:layout_marginVertical="1dp"
                 android:background="@drawable/btn_background"
                 android:text="Programs" />
 
             <Button
+                android:id="@+id/btn_courses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginVertical="1dp"
+                android:background="@drawable/btn_background"
+                android:text="Courses" />
+
+            <Button
                 android:id="@+id/btn_profile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:layout_marginVertical="1dp"
                 android:background="@drawable/btn_background"
                 android:text="Profile" />
@@ -79,6 +91,7 @@
             <Button
                 android:id="@+id/btn_scholarship"
                 android:layout_width="match_parent"
+                android:textColor="@color/white"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="1dp"
                 android:background="@drawable/btn_background"
@@ -87,6 +100,7 @@
             <Button
                 android:id="@+id/btn_map"
                 android:layout_width="match_parent"
+                android:textColor="@color/white"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="1dp"
                 android:background="@drawable/btn_background"
@@ -96,6 +110,7 @@
                 android:id="@+id/btn_change_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:layout_marginVertical="1dp"
                 android:background="@drawable/btn_background"
                 android:text="Change User" />

@@ -1,10 +1,13 @@
 package io.nyxbit.phinma
 
+import android.graphics.Color
+import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import io.nyxbit.phinma.databinding.FragmentProgramPreviewBinding
 
@@ -19,6 +22,16 @@ class ProgramPreview : Fragment() {
     ): View {
         binding = FragmentProgramPreviewBinding.inflate(inflater, container, false)
         val viewModel = ViewModelProvider(requireActivity())[ViewModel::class.java]
+        binding.header.header.setBackgroundColor(Color.parseColor(viewModel.school.primaryColor))
+
+        val drawable = ContextCompat.getDrawable(requireContext(), R.drawable.card_gradient) as GradientDrawable
+        drawable.colors = intArrayOf(Color.parseColor(viewModel.school.primaryColor), Color.parseColor("#34202020"))
+
+        val mainDrawable = ContextCompat.getDrawable(requireContext(), R.drawable.card_gradient_invert) as GradientDrawable
+        mainDrawable.colors = intArrayOf(Color.parseColor(viewModel.school.primaryColor), Color.parseColor(viewModel.school.secondaryColor))
+
+        binding.imageCover.foreground = drawable
+        binding.mainContent.background = mainDrawable
 
         val descriptions = listOf(
             "With PHINMA's RAD Learning, your distance is no longer a problem!\n\n" +

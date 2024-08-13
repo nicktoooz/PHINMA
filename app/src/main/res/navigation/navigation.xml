@@ -68,6 +68,14 @@
             app:destination="@id/chooseSchool"
             app:popUpTo="@id/chooseSchool"
             app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_home2_to_courseOffering"
+            app:destination="@id/courseOffering" />
 
     </fragment>
+    <fragment
+        android:id="@+id/courseOffering"
+        android:name="io.nyxbit.phinma.CourseOffering"
+        android:label="fragment_course_offering"
+        tools:layout="@layout/fragment_course_offering" />
 </navigation>

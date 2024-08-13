@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.cardview.widget.CardView
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -34,7 +33,6 @@ class ChooseSchool : Fragment() {
         setNavigation(binding.southwestern, R.id.action_chooseSchool_to_profile, School.SOUTHWESTERN)
         setNavigation(binding.union, R.id.action_chooseSchool_to_profile, School.UNION)
         setNavigation(binding.republican, R.id.action_chooseSchool_to_profile, School.REPUBLICAN)
-
         return binding.root
     }
 
@@ -47,16 +45,18 @@ class ChooseSchool : Fragment() {
     }
 }
 
-enum class School(val value: String, val emblem: Int) {
-    NONE("", R.mipmap.ic_launcher_round),
-    PUCU("PHINMA UPang College Urdaneta", R.drawable.emblem_pucu),
-    UPANG("PHINMA University of Pangasinan", R.drawable.emblem_upang),
-    JUDE("PHINMA Saint Jude College", R.drawable.emblem_jude),
-    RIZAL("PHINMA Rizal College of Laguna", R.drawable.emblem_rizal),
-    ILOILO("PHINMA University of Iloilo", R.drawable.emblem_iloilo),
-    ARAULLO("PHINMA Araullo University", R.drawable.emblem_araullo),
-    CDO("PHINMA Cagayan De Oro College", R.drawable.emblem_cdo),
-    SOUTHWESTERN("SOUTHWESTERN UNIVERSITY", R.drawable.emblem_southwestern),
-    UNION("PHINMA Union College of Laguna",R.drawable.emblem_laguna),
-    REPUBLICAN("PHINMA Republican College", R.drawable.emblem_republican)
+
+enum class School(val value: String, val emblem: Int, val primaryColor: String, secon: String) {
+    NONE("", R.mipmap.ic_launcher_round, "#FFFFFF", "#FFFFFF"),
+    PUCU("PHINMA UPang College Urdaneta", R.drawable.emblem_pucu, "#3b4c23", "#a98d00"),
+    UPANG("PHINMA University of Pangasinan", R.drawable.emblem_upang, "#3b4c23", "#a98d00"),
+    JUDE("PHINMA Saint Jude College", R.drawable.emblem_jude, "#1b4c43", "#d79a2a"),
+    RIZAL("PHINMA Rizal College of Laguna", R.drawable.emblem_rizal, "#2a224a", "#9494a1"),
+    ILOILO("PHINMA University of Iloilo", R.drawable.emblem_iloilo, "#324b22", "#f5ca00"),
+    ARAULLO("PHINMA Araullo University", R.drawable.emblem_araullo, "#183060", "#bc9c26"),
+    CDO("PHINMA Cagayan De Oro College", R.drawable.emblem_cdo, "#0d4d24", "#92840f"),
+    SOUTHWESTERN("SOUTHWESTERN UNIVERSITY", R.drawable.emblem_southwestern, "#9b0b0b", "#232C64"),
+    UNION("PHINMA Union College of Laguna", R.drawable.emblem_laguna, "#442482", "#d79a2a"),
+    REPUBLICAN("PHINMA Republican College", R.drawable.emblem_republican, "#1b4c43", "#d79a2a");
+    val secondaryColor: String = secon
 }
