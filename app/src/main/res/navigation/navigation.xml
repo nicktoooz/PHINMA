@@ -71,6 +71,9 @@
         <action
             android:id="@+id/action_home2_to_courseOffering"
             app:destination="@id/courseOffering" />
+        <action
+            android:id="@+id/action_home2_to_scholarship"
+            app:destination="@id/scholarship" />
 
     </fragment>
     <fragment
@@ -78,4 +81,9 @@
         android:name="io.nyxbit.phinma.CourseOffering"
         android:label="fragment_course_offering"
         tools:layout="@layout/fragment_course_offering" />
+    <fragment
+        android:id="@+id/scholarship"
+        android:name="io.nyxbit.phinma.Scholarship"
+        android:label="fragment_scholarship"
+        tools:layout="@layout/fragment_scholarship" />
 </navigation>

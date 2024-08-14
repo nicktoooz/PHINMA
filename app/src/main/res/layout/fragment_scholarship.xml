@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".Scholarship">
+
+
+    <include layout="@layout/frag_header" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <io.nyxbit.phinma.GradientTextView
+            android:id="@+id/hk_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/odense_demibold"
+            android:text="Hawak Kamay"
+            android:textSize="55sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-30dp"
+            android:fontFamily="@font/mitra_light"
+            android:padding="0dp"
+            android:text="SCHOLARSHIP"
+            android:textSize="50dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/odense_demibold"
+                android:text="HK"
+                android:textColor="#134C3D"
+                android:textSize="70sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/akagi_extra_bold"
+                android:text="25"
+                android:textColor="#242C6A"
+                android:textSize="70sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="-15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/akagi_extra_bold"
+                android:text="25%"
+                android:textColor="#242C6A"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/myriad_pro"
+                android:text=" discount"
+                android:textColor="#242C6A"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="-5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/myriad_pro"
+            android:text="on Tuition and Miscellaneus"
+            android:textColor="#242C6A" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/odense_demibold"
+                android:text="HK"
+                android:textColor="#134C3D"
+                android:textSize="70sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/akagi_extra_bold"
+                android:text="50"
+                android:textColor="#242C6A"
+                android:textSize="70sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="-15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/akagi_extra_bold"
+                android:text="50%"
+                android:textColor="#242C6A"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/myriad_pro"
+                android:text=" discount"
+                android:textColor="#242C6A"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="-5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/myriad_pro"
+            android:text="on Tuition and Miscellaneus"
+            android:textColor="#242C6A" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/odense_demibold"
+                android:text="HK"
+                android:textColor="#134C3D"
+                android:textSize="70sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/akagi_extra_bold"
+                android:text="75"
+                android:textColor="#242C6A"
+                android:textSize="70sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="-15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/akagi_extra_bold"
+                android:text="75%"
+                android:textColor="#242C6A"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/myriad_pro"
+                android:text=" discount"
+                android:textColor="#242C6A"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="-5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/myriad_pro"
+            android:text="on Tuition and Miscellaneus"
+            android:textColor="#242C6A" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/odense_demibold"
+                android:text="HK"
+                android:textColor="#134C3D"
+                android:textSize="70sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/akagi_extra_bold"
+                android:text="100"
+                android:textColor="#242C6A"
+                android:textSize="70sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="-15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/akagi_extra_bold"
+                android:text="100%"
+                android:textColor="#242C6A"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/myriad_pro"
+                android:text=" discount"
+                android:textColor="#242C6A"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="-5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/myriad_pro"
+            android:text="on Tuition and Miscellaneus"
+            android:textColor="#242C6A" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/myriad_pro"
+        android:text="No Maintaining Grade"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        android:textColor="#242C6A"
+        android:textSize="25sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/myriad_pro"
+        android:textStyle="bold"
+        android:text=" Valid for the entire program duration"
+        android:textColor="#242C6A"
+        android:textSize="25sp" />
+
+</LinearLayout>

@@ -5,5 +5,12 @@
        android:fontStyle="normal"/>
    <font android:font="@font/myriad_pro"
       android:fontStyle="normal"/>
-
+   <font android:font="@font/odense"
+       android:fontStyle="normal"/>
+   <font android:font="@font/odense_demibold"
+       android:fontStyle="normal"/>
+   <font android:font="@font/mitra_light"
+       android:fontStyle="normal"/>
+   <font android:font="@font/akagi_extra_bold"
+       android:fontStyle="normal"/>
 </font-family>
