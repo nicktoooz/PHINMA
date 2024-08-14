@@ -1,5 +1,6 @@
 package io.nyxbit.phinma
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -22,9 +23,11 @@ class SchoolMap : Fragment() {
         binding = FragmentSchoolMapBinding.inflate(inflater, container, false)
         val viewModel = ViewModelProvider(requireActivity())[ViewModel::class.java]
 
+
+        binding.header.header.setBackgroundColor(Color.parseColor(viewModel.school.primaryColor))
         // Initialize WebView
         val webView: WebView = binding.webView
-
+        binding.title.text = "Map of ${viewModel.school.value}"
         // Configure WebView settings
         val webSettings: WebSettings = webView.settings
         webSettings.javaScriptEnabled = true // Enable JavaScript if needed

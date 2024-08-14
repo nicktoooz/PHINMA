@@ -8,7 +8,8 @@
     tools:context=".Scholarship">
 
 
-    <include layout="@layout/frag_header" />
+    <include android:id="@+id/header"
+        layout="@layout/frag_header" />
 
     <LinearLayout
         android:layout_width="wrap_content"
