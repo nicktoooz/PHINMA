@@ -48,20 +48,31 @@ class FragmentCalendar : Fragment() {
             "2025-01-17"  // Seminar Caltech/Safety Training
         )
 
+
+
+        //custom calendar starts from here
+
         val currentMonth = YearMonth.now()
         val firstMonth = currentMonth.minusMonths(10)
         val lastMonth = currentMonth.plusMonths(10)
 
+
+        //initial month update
         updateMonthTitle(currentMonth)
 
         binding.calendarView.setup(firstMonth, lastMonth, DayOfWeek.SUNDAY)
         binding.calendarView.scrollToMonth(currentMonth)
 
+
+        //triggered everytime month gets swapped from view
         binding.calendarView.monthScrollListener = { month ->
             updateMonthTitle(month.yearMonth)
             Log.d("TAG", month.toString())
         }
 
+
+        //day binder
+        //day styles goes here
         binding.calendarView.dayBinder = object : MonthDayBinder<DayViewContainer> {
             override fun create(view: View): DayViewContainer {
                 return DayViewContainer(view)
@@ -69,15 +80,22 @@ class FragmentCalendar : Fragment() {
 
             override fun bind(container: DayViewContainer, data: CalendarDay) {
                 container.textView.text = data.date.dayOfMonth.toString()
+
+                //day click listener
                 container.view.setOnClickListener {
                     if (event.contains(data.date.toString())) {
                         viewModel.date = data.date.toString()
                         findNavController().navigate(R.id.action_fragmentCalendar_to_event)
                     }
                 }
+
                 val specificDate = LocalDate.parse(data.date.toString())
                 val dayOfWeek: DayOfWeek = specificDate.dayOfWeek
 
+                //checks if the day is on the list
+                //if it has, replace the background color of the view
+                //optional, make the label visible, "in xml"
+                //if not, reset it to prevent unwanted bugs
                 if (event.contains(data.date.toString())) {
                     container.label.visibility = View.VISIBLE
                     container.view.setBackgroundColor(
@@ -96,6 +114,8 @@ class FragmentCalendar : Fragment() {
                     container.view.setBackgroundColor(Color.TRANSPARENT)
                 }
 
+
+                //!important, default style
                 if (data.position == DayPosition.MonthDate) {
                     container.textView.setTextColor(Color.BLACK)
                 } else {
@@ -105,22 +125,25 @@ class FragmentCalendar : Fragment() {
                     container.textView.setTextColor(Color.RED)
                 }
 
+                //optional, make the sunday red
                 if (dayOfWeek == DayOfWeek.SUNDAY) {
                     container.textView.setTextColor(Color.RED)
                 }
-
             }
         }
 
         return binding.root
     }
 
+
+    //function for updating month title
     private fun updateMonthTitle(yearMonth: YearMonth) {
         val formatter = DateTimeFormatter.ofPattern("MMMM yyyy", Locale.getDefault())
         val monthTitle = yearMonth.format(formatter)
         binding.monthName.text = monthTitle
     }
 
+    //helper class
     class DayViewContainer(view: View) : ViewContainer(view) {
         val textView: TextView = view.findViewById(R.id.calendarDayText)
         val label: View = view.findViewById(R.id.label)

@@ -26,8 +26,12 @@
             android:textColor="#333"
             android:textSize="36sp" />
 
+
+        <!--   Day name container    -->
         <include layout="@layout/weekdaystitlecontainer" />
 
+        <!--   CALENDAR VIEW     -->
+        <!--   Create a list item for this calendar view "just like in recyclerview"     -->
         <com.kizitonwose.calendar.view.CalendarView
             android:id="@+id/calendarView"
             android:layout_width="match_parent"
