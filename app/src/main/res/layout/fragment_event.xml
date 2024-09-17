@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingHorizontal="20sp"
-    tools:context=".Event">
+    tools:context=".EventFragment">
 
     <TextView
         android:layout_marginTop="30dp"

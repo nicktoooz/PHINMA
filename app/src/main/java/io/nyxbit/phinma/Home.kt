@@ -34,7 +34,10 @@ class Home : Fragment() {
             btnScholarship.background = drawable
             btnMap.background = drawable
             btnChangeUser.background = drawable
-            btnCalendar.background = drawable
+            if (viewModel.school == School.PUCU){
+                btnCalendar.visibility = View.VISIBLE
+                btnCalendar.background = drawable
+            }
 
         }
         binding.ivEmblem.setImageResource(viewModel.school.emblem)

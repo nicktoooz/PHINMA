@@ -100,7 +100,7 @@
     </fragment>
     <fragment
         android:id="@+id/event"
-        android:name="io.nyxbit.phinma.Event"
+        android:name="io.nyxbit.phinma.EventFragment"
         android:label="fragment_event"
         tools:layout="@layout/fragment_event" />
 </navigation>

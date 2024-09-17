@@ -3,6 +3,7 @@ package io.nyxbit.phinma
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -24,8 +25,11 @@ import java.util.Locale
 
 class FragmentCalendar : Fragment() {
 
+
     private lateinit var binding: FragmentCalendarBinding
 
+    private lateinit var handler: Handler
+    private lateinit var runnable: Runnable
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,6 +39,10 @@ class FragmentCalendar : Fragment() {
         binding = FragmentCalendarBinding.inflate(inflater, container, false)
         val viewModel = ViewModelProvider(requireActivity())[ViewModel::class.java]
         val event = mutableListOf(
+
+            "2024-09-19", // Komsayahan 1
+            "2024-09-20", // Komsayahan 2
+            "2024-09-21", // Komsayahan 3
             "2024-11-06", // English Fest
             "2024-11-07", // Tourism Day
             "2024-11-08", // Testimonial and CEA Mustahan/Builders' Assembly
@@ -49,8 +57,29 @@ class FragmentCalendar : Fragment() {
         )
 
 
+        val images =
+            mutableListOf(R.drawable.komsayahan)
 
-        //custom calendar starts from here
+        val adapter = ViewPagerAdapter(images) {
+            if (it == R.drawable.komsayahan) {
+                viewModel.date = "2024-09-19"
+                findNavController().navigate(R.id.action_fragmentCalendar_to_event)
+            }
+        }
+        binding.vpEvent.adapter = adapter
+        binding.vpEvent.setCurrentItem(Int.MAX_VALUE / 2, false)
+
+        handler = Handler()
+        runnable = object : Runnable {
+            override fun run() {
+                val currentItem = binding.vpEvent.currentItem
+                val nextItem = (currentItem + 1) % adapter.itemCount
+                binding.vpEvent.setCurrentItem(nextItem, true)
+                handler.postDelayed(this, 3500)
+            }
+        }
+        handler.postDelayed(runnable, 3500)
+
 
         val currentMonth = YearMonth.now()
         val firstMonth = currentMonth.minusMonths(10)
@@ -133,6 +162,11 @@ class FragmentCalendar : Fragment() {
         }
 
         return binding.root
+    }
+
+    override fun onDestroy() {
+        handler.removeCallbacks(runnable)
+        super.onDestroy()
     }
 
 
