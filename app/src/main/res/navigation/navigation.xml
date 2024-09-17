@@ -74,6 +74,9 @@
         <action
             android:id="@+id/action_home2_to_scholarship"
             app:destination="@id/scholarship" />
+        <action
+            android:id="@+id/action_home2_to_fragmentCalendar"
+            app:destination="@id/fragmentCalendar" />
 
     </fragment>
     <fragment
@@ -86,4 +89,18 @@
         android:name="io.nyxbit.phinma.Scholarship"
         android:label="fragment_scholarship"
         tools:layout="@layout/fragment_scholarship" />
+    <fragment
+        android:id="@+id/fragmentCalendar"
+        android:name="io.nyxbit.phinma.FragmentCalendar"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" >
+        <action
+            android:id="@+id/action_fragmentCalendar_to_event"
+            app:destination="@id/event" />
+    </fragment>
+    <fragment
+        android:id="@+id/event"
+        android:name="io.nyxbit.phinma.Event"
+        android:label="fragment_event"
+        tools:layout="@layout/fragment_event" />
 </navigation>

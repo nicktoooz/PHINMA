@@ -10,6 +10,7 @@ class ViewModel : ViewModel(){
     var year : String = ""
     var address: String = ""
     var mobileNumber : String = ""
+    var date : String = ""
 
     fun clear(){
         school = School.NONE
@@ -18,5 +19,6 @@ class ViewModel : ViewModel(){
         year = ""
         address = ""
         mobileNumber = ""
+        date = ""
     }
 }

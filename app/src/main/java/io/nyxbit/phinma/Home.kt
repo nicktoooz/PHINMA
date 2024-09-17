@@ -34,6 +34,7 @@ class Home : Fragment() {
             btnScholarship.background = drawable
             btnMap.background = drawable
             btnChangeUser.background = drawable
+            btnCalendar.background = drawable
 
         }
         binding.ivEmblem.setImageResource(viewModel.school.emblem)
@@ -51,6 +52,7 @@ class Home : Fragment() {
             viewModel.clear()
             findNavController().popBackStack(R.id.chooseSchool, false)
         }
+        binding.btnCalendar.setOnClickListener { findNavController().navigate(R.id.action_home2_to_fragmentCalendar) }
 
         return binding.root
     }
