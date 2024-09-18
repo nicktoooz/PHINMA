@@ -34,9 +34,12 @@ class Home : Fragment() {
             btnScholarship.background = drawable
             btnMap.background = drawable
             btnChangeUser.background = drawable
+
             if (viewModel.school == School.PUCU){
                 btnCalendar.visibility = View.VISIBLE
                 btnCalendar.background = drawable
+                btnHandbook.visibility = View.VISIBLE
+                btnHandbook.background = drawable
             }
 
         }
@@ -56,6 +59,7 @@ class Home : Fragment() {
             findNavController().popBackStack(R.id.chooseSchool, false)
         }
         binding.btnCalendar.setOnClickListener { findNavController().navigate(R.id.action_home2_to_fragmentCalendar) }
+        binding.btnHandbook.setOnClickListener{findNavController().navigate(R.id.action_home2_to_fragmentHandbook)}
 
         return binding.root
     }

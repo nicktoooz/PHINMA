@@ -55,7 +55,6 @@
         android:background="@color/background"
         android:gravity="center">
 
-
         <LinearLayout
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -116,6 +115,15 @@
                 android:background="@drawable/btn_background"
                 android:text="Calendar" />
 
+            <Button
+                android:id="@+id/btn_handbook"
+                android:layout_width="match_parent"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="1dp"
+                android:visibility="gone"
+                android:background="@drawable/btn_background"
+                android:text="Handbook" />
 
             <Button
                 android:id="@+id/btn_change_user"

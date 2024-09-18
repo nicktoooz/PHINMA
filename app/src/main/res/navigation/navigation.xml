@@ -77,6 +77,9 @@
         <action
             android:id="@+id/action_home2_to_fragmentCalendar"
             app:destination="@id/fragmentCalendar" />
+        <action
+            android:id="@+id/action_home2_to_fragmentHandbook"
+            app:destination="@id/fragmentHandbook" />
 
     </fragment>
     <fragment
@@ -103,4 +106,9 @@
         android:name="io.nyxbit.phinma.EventFragment"
         android:label="fragment_event"
         tools:layout="@layout/fragment_event" />
+    <fragment
+        android:id="@+id/fragmentHandbook"
+        android:name="io.nyxbit.phinma.FragmentHandbook"
+        android:label="fragment_handbook"
+        tools:layout="@layout/fragment_handbook" />
 </navigation>
